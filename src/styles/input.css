@@ -1,0 +1,17 @@
+.input-container {
+  min-width: 380px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+}
+
+input[type='date'] {
+  max-width: 270px;
+}
