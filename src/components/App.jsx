@@ -32,7 +32,8 @@ export default function App() {
       {
         company: 'Alarm.com',
         role: 'Quality Engineer',
-        responsibilities: '',
+        responsibilities:
+          '- Found bugs in weekly testing\n- Tested and certified new features\n- Wrote smoketests for automation',
         startDate: 'Jun 2020',
         endDate: 'Sep 2023',
       },

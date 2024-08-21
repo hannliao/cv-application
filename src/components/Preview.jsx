@@ -19,8 +19,7 @@ export default function Preview({ formData }) {
   const formatDate = (date) => {
     if (date) {
       const dateObject = new Date(date);
-      const formattedDate = format(dateObject, 'MMM yyyy');
-      return formattedDate;
+      return format(dateObject, 'MMM yyyy');
     }
   };
 
@@ -75,7 +74,16 @@ export default function Preview({ formData }) {
                   {formatDate(experience.endDate)}
                 </p>
               </div>
-              <p>{experience.responsibilities}</p>
+              <p>
+                {experience.responsibilities
+                  .split('\n')
+                  .map((responsibility, index) => (
+                    <span key={index}>
+                      {responsibility}
+                      <br />
+                    </span>
+                  ))}
+              </p>
             </div>
           ))}
         </div>
