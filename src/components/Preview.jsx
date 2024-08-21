@@ -30,6 +30,39 @@ export default function Preview({ formData }) {
         <div className="name">
           {firstName} {lastName}
         </div>
+
+        <div className="education">
+          <h3>Education</h3>
+          <p>{degree}</p>
+          <p>{school}</p>
+          <p>
+            {graduation && <>Graduated: </>}
+            {graduation}
+          </p>
+        </div>
+
+        <div className="contact">
+          <h3>Contact</h3>
+          <ul>
+            <li>
+              <Icon path="/email.svg" />
+              {email}
+            </li>
+            <li>
+              <Icon path="/phone.svg" />
+              {phone}
+            </li>
+            <li>
+              {linkedin && <Icon path="/linkedin.svg" />}
+              {linkedin}
+            </li>
+            <li>
+              {github && <Icon path="/github.svg" />}
+              {github}
+            </li>
+          </ul>
+        </div>
+
         <div className="experience">
           <h3>Experience</h3>
           {experiences.map((experience, index) => (
@@ -45,33 +78,6 @@ export default function Preview({ formData }) {
               <p>{experience.responsibilities}</p>
             </div>
           ))}
-        </div>
-        <div className="contact">
-          <h3>Contact</h3>
-          <ul>
-            <li>
-              {email && <Icon path="/email.svg" />}
-              {email}
-            </li>
-            <li>
-              {phone && <Icon path="/phone.svg" />}
-              {phone}
-            </li>
-            <li>
-              {linkedin && <Icon path="/linkedin.svg" />}
-              {linkedin}
-            </li>
-            <li>
-              {github && <Icon path="/github.svg" />}
-              {github}
-            </li>
-          </ul>
-        </div>
-        <div className="education">
-          <h3>Education</h3>
-          <p>{degree}</p>
-          <p>{school}</p>
-          <p>Graduated: {graduation}</p>
         </div>
       </div>
     </div>

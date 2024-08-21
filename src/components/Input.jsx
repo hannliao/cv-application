@@ -7,6 +7,7 @@ export default function Input({
   value,
   placeholder,
   onChange,
+  isRequired = false,
 }) {
   const className = label === '' ? 'input-field' : 'input-field date';
 
@@ -20,6 +21,7 @@ export default function Input({
         placeholder={placeholder}
         onChange={onChange}
         className={className}
+        required={isRequired}
       />
     </label>
   );

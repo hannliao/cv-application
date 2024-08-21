@@ -10,12 +10,14 @@ export default function General({ formData, onChange }) {
         value={firstName}
         placeholder="First Name"
         onChange={onChange}
+        isRequired={true}
       />
       <Input
         name="lastName"
         value={lastName}
         placeholder="Last Name"
         onChange={onChange}
+        isRequired={true}
       />
       <Input
         type="email"
@@ -23,6 +25,7 @@ export default function General({ formData, onChange }) {
         value={email}
         placeholder="Email"
         onChange={onChange}
+        isRequired={true}
       />
       <Input
         type="tel"
@@ -30,19 +33,20 @@ export default function General({ formData, onChange }) {
         value={phone}
         placeholder="Phone"
         onChange={onChange}
+        isRequired={true}
       />
       <Input
         type="text"
         name="linkedin"
         value={linkedin}
-        placeholder="LinkedIn"
+        placeholder="LinkedIn (optional)"
         onChange={onChange}
       />
       <Input
         type="text"
         name="github"
         value={github}
-        placeholder="GitHub"
+        placeholder="GitHub (optional)"
         onChange={onChange}
       />
     </>
