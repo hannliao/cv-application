@@ -1,10 +1,10 @@
 import Input from './Input';
 
-export default function Experience({ formData, onChange, onSubmit }) {
-  const { company, role, responsibilities, startDate, endDate } = formData;
+export default function Experience({ experience, onChange }) {
+  const { company, role, responsibilities, startDate, endDate } = experience;
 
   return (
-    <form onSubmit={onSubmit}>
+    <>
       <Input
         name="company"
         value={company}
@@ -33,7 +33,6 @@ export default function Experience({ formData, onChange, onSubmit }) {
         value={endDate}
         onChange={onChange}
       />
-      <button type="submit">Save</button>
-    </form>
+    </>
   );
 }

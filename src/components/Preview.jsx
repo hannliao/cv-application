@@ -1,4 +1,5 @@
 import '../styles/preview.css';
+import { format } from 'date-fns';
 import Icon from './Icon';
 
 export default function Preview({ formData }) {
@@ -12,12 +13,16 @@ export default function Preview({ formData }) {
     degree,
     school,
     graduation,
-    company,
-    role,
-    responsibilities,
-    startDate,
-    endDate,
+    experiences,
   } = formData;
+
+  const formatDate = (date) => {
+    if (date) {
+      const dateObject = new Date(date);
+      const formattedDate = format(dateObject, 'MMM yyyy');
+      return formattedDate;
+    }
+  };
 
   return (
     <div className="preview-container">
@@ -27,33 +32,38 @@ export default function Preview({ formData }) {
         </div>
         <div className="experience">
           <h3>Experience</h3>
-          <h4>{company}</h4>
-          <div className="role-date">
-            <p>{role}</p>
-            <p>
-              {startDate} - {endDate}
-            </p>
-          </div>
-          <p>{responsibilities}</p>
+          {experiences.map((experience, index) => (
+            <div key={index}>
+              <h4>{experience.company}</h4>
+              <div className="role-date">
+                <p>{experience.role}</p>
+                <p>
+                  {formatDate(experience.startDate)} -{' '}
+                  {formatDate(experience.endDate)}
+                </p>
+              </div>
+              <p>{experience.responsibilities}</p>
+            </div>
+          ))}
         </div>
         <div className="contact">
           <h3>Contact</h3>
           <ul>
             <li>
-              <Icon path="/email.svg" />
-              &emsp;{email}
+              {email && <Icon path="/email.svg" />}
+              {email}
             </li>
             <li>
-              <Icon path="/phone.svg" />
-              &emsp;{phone}
+              {phone && <Icon path="/phone.svg" />}
+              {phone}
             </li>
             <li>
-              <Icon path="/linkedin.svg" />
-              &emsp;{linkedin}
+              {linkedin && <Icon path="/linkedin.svg" />}
+              {linkedin}
             </li>
             <li>
-              <Icon path="/github.svg" />
-              &emsp;{github}
+              {github && <Icon path="/github.svg" />}
+              {github}
             </li>
           </ul>
         </div>

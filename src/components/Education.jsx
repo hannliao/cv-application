@@ -1,10 +1,10 @@
 import Input from './Input';
 
-export default function Education({ formData, onChange, onSubmit }) {
+export default function Education({ formData, onChange }) {
   const { degree, school, graduation } = formData;
 
   return (
-    <form onSubmit={onSubmit}>
+    <>
       <Input
         name="degree"
         value={degree}
@@ -23,7 +23,6 @@ export default function Education({ formData, onChange, onSubmit }) {
         placeholder="Graduation Date"
         onChange={onChange}
       />
-      <button type="submit">Save</button>
-    </form>
+    </>
   );
 }

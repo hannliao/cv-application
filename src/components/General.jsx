@@ -1,10 +1,10 @@
 import Input from './Input';
 
-export default function General({ formData, onChange, onSubmit }) {
+export default function General({ formData, onChange }) {
   const { firstName, lastName, email, phone, linkedin, github } = formData;
 
   return (
-    <form onSubmit={onSubmit}>
+    <>
       <Input
         name="firstName"
         value={firstName}
@@ -45,7 +45,6 @@ export default function General({ formData, onChange, onSubmit }) {
         placeholder="GitHub"
         onChange={onChange}
       />
-      <button type="submit">Save</button>
-    </form>
+    </>
   );
 }
