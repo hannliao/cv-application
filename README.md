@@ -1,6 +1,6 @@
 # cv-application
 
-Create your CV using [this](https://66c63133beac8658daf7d1c7--marvelous-fairy-e4699b.netlify.app/) React app!
+Create your CV using [this](https://hannliao-cv-application.netlify.app/) React app!
 
 ## Features
 
