@@ -23,19 +23,34 @@ export default function App() {
     lastName: 'Liao',
     email: 'notreal@gmail.com',
     phone: '555-555-5555',
-    linkedin: 'linkedin.com/in/hannliao/',
-    github: 'github.com/hannliao',
+    linkedin: 'https://linkedin.com/in/hannliao',
+    github: 'https://github.com/hannliao',
     degree: 'B.S. Mechanical Engineering',
     school: 'University of Maryland, College Park',
     graduation: 'May 2020',
     experiences: [
       {
         company: 'Alarm.com',
+        role: 'Quality Engineer II',
+        responsibilities:
+          '- Identified optimal approach for testing and product releases\n- Investigated and handled critical issues to ensure timely product delivery to users\n- Tracked status of error monitoring tickets and asked team members to address issues',
+        startDate: 'May 2023',
+        endDate: 'Oct 2023',
+      },
+      {
         role: 'Quality Engineer',
         responsibilities:
-          '- Found bugs in weekly testing\n- Tested and certified new features\n- Wrote smoketests for automation',
+          '- Led testing and certification of over 12 projects\n- Identified bugs and communicated risk and urgency to software engineers and product managers\n- Developed automated and manual smoke tests to monitor performance of product features',
         startDate: 'Jun 2020',
-        endDate: 'Sep 2023',
+        endDate: 'May 2023',
+      },
+      {
+        company: 'DuPont',
+        role: 'Mechanical Engineering Intern',
+        responsibilities:
+          '- Designed CAD diagrams according to onsite walkthroughs of boiler-feedwater piping\n- Calculated lab airflow to address safety concerns',
+        startDate: 'May 2019',
+        endDate: 'Aug 2019',
       },
     ],
   });

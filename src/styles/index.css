@@ -1,5 +1,5 @@
 :root {
-  line-height: 1.5;
+  line-height: 1.8;
   font-weight: 400;
   --accent: #bfc2fb;
   --border: #646cff;
@@ -44,7 +44,7 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 16px;
+  margin: 12px;
 }
 
 form {

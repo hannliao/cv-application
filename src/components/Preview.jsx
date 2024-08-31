@@ -30,16 +30,6 @@ export default function Preview({ formData }) {
           {firstName} {lastName}
         </div>
 
-        <div className="education">
-          <h3>Education</h3>
-          <p>{degree}</p>
-          <p>{school}</p>
-          <p>
-            {graduation && <>Graduated: </>}
-            {graduation}
-          </p>
-        </div>
-
         <div className="contact">
           <h3>Contact</h3>
           <ul>
@@ -60,6 +50,13 @@ export default function Preview({ formData }) {
               {github}
             </li>
           </ul>
+        </div>
+
+        <div className="education">
+          <h3>Education</h3>
+          <p>{degree}</p>
+          <p>{school}</p>
+          <p>{graduation}</p>
         </div>
 
         <div className="experience">
